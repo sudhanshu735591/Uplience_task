@@ -1,6 +1,4 @@
 import { useState } from "react";
-import ColorButtons from "../Button/button";
-import FormData from "../formData/formData";
 
 function Home(){
 
