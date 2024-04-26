@@ -108,9 +108,9 @@ function Home(){
                         <div className="text-white text-xl font-bold">Counter: {count}</div>
 
                         <div className="flex gap-3 justify-center flex-wrap ">
-                            <button onClick={increaseHandler} className="bg-green-400 rounded pl-4 pr-4 text-white pb-1">+</button>
-                            <button onClick={resetHanlder} className="bg-yellow-400 pl-4 rounded pr-4 text-white pb-1">Reset</button>
-                            <button onClick={decreaseHanlder} className="bg-red-800 pl-4 rounded pr-4 text-white pb-1">-</button>
+                            <button onClick={increaseHandler} className="bg-green-400 rounded pl-4 pr-4 text-white pb-1 font-bold">+</button>
+                            <button onClick={resetHanlder} className="bg-yellow-400 pl-4 rounded pr-4 text-white pb-1 font-bold">Reset</button>
+                            <button onClick={decreaseHanlder} className="bg-red-800 pl-4 rounded pr-4 text-white pb-1 font-bold">-</button>
                         </div>
                     </div>
 
@@ -151,7 +151,7 @@ function Home(){
                     <input onChange={(e)=>setName(e.target.value)} className="w-full border p-3 rounded focus:outline-none text-black" type="text" placeholder="Enter any name"/>
                     {!name && flag && <p className="text-red-700">Please Enter Name !!</p>}
 
-                    <p className="w-full border p-3 rounded">Id generator : {idGenerator}</p>
+                    <p className="w-full border p-3 rounded font-bold" >Id generator : {idGenerator}</p>
                     <button onClick={handleIdgenerator} className="w-full p-2 bg-violet-700	rounded-lg text-white font-boldf">Save</button>
                 </div>
 
