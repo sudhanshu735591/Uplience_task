@@ -31,7 +31,7 @@ function Home(){
     });
 
     const increaseHandler = ()=>{
-        if(count<10){
+        if(count<20){
             setCount(count+1);
         }
     }
@@ -201,10 +201,9 @@ function Home(){
 
             <div>
                 {number.map((val, index) => {
-                    // Calculate border-radius dynamically
-                    const borderRadius = `${(index + 1) * 5}px`; // Adjust increment as needed
+                    const borderRadius = `${(index + 1) * 5}px`; 
                     return (
-                    <div key={index} className="border w-[100%] p-3" style={{ borderRadius }}>
+                    <div key={index} className="border w-[100%] p-3" style={{ borderBottomLeftRadius:borderRadius , borderBottomRightRadius:borderRadius}}>
                     </div>
                     );
                 })}

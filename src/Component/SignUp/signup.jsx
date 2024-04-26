@@ -22,7 +22,8 @@ function SignUp(){
         if(data.username && data.password){
             localStorage.setItem("username", data.username);
             localStorage.setItem("password", data.password);
-            alert("Account created successfully")
+            alert("Account created successfully");
+            navigate("/");
         }
     }
 
