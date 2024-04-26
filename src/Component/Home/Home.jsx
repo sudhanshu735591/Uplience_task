@@ -13,6 +13,9 @@ function Home(){
 
     const [flag1 , setFlag1] = useState(false);
 
+    const [flag2 , setFlag2] = useState(false);
+
+
     const [count, setCount] = useState(0);
 
     const [property, setProperty] = useState("");
@@ -87,6 +90,8 @@ function Home(){
 
     function handleSubmit(){
 
+        setFlag2(true);
+
         if(userData.address && userData.email && userData.phone){
             setFlag1(true);
         }
@@ -158,14 +163,14 @@ function Home(){
                         <div className="flex flex-col  items-start">
                             <label className="text-lg" for="name">Enter your address: *</label>
                             <input onChange={(e)=>setUserData({...userData, address:e.target.value})} className="border rounded w-full pl-2 p-3 focus:outline-none" type="text"  placeholder="Enter your address"/>
-                            {flag1 && !userData.address && <p className="text-red-500">Please Enter your address</p>}
+                            {flag2 && !userData.address && <p className="text-red-500">Please Enter your address</p>}
                         </div>
 
                         <div className="flex flex-col  items-start">
                             <label className="text-lg" for="email">Enter your email: *</label>
                             <input onChange={(e)=>setUserData({...userData, email:e.target.value})} 
                             className="border rounded w-full pl-2 p-3 focus:outline-none" type="email"  placeholder="Enter your email"/>
-                            {flag1 && !userData.email && <p className="text-red-500">Please Enter your email</p>}
+                            {flag2 && !userData.email && <p className="text-red-500">Please Enter your email</p>}
 
                         </div>
 
@@ -178,7 +183,7 @@ function Home(){
                             })} 
                         
                         className="border rounded w-full pl-2 p-3 focus:outline-none" type="number"  placeholder="Enter your number"/>
-                        {flag1 && !userData.phone && <p className="text-red-500">Please Enter your number</p>}
+                        {flag2 && !userData.phone && <p className="text-red-500">Please Enter your number</p>}
                     </div>
 
 
