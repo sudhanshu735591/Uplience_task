@@ -100,12 +100,12 @@ function Home(){
 
 
     return(
-        <div className="border w-[80%] m-auto flex flex-col mt-20 rounded-xl gap-3 p-10 bg-black">
+        <div className="border w-[80%] m-auto flex flex-col mt-20 rounded-xl gap-3 p-10 bg-[cadetblue]">
             <div className="flex rounded-xl">
 
                 <div className="flex m-auto gap-10  w-[81%] ">
                     <div className="border p-3 w-[46%] rounded-xl flex flex-col gap-3 text-center">
-                        <div className="text-white text-lg">Counter: {count}</div>
+                        <div className="text-white text-xl font-bold">Counter: {count}</div>
 
                         <div className="flex gap-3 justify-center flex-wrap ">
                             <button onClick={increaseHandler} className="bg-green-400 rounded pl-4 pr-4 text-white pb-1">+</button>
@@ -117,7 +117,7 @@ function Home(){
 
 
                     <div className="border p-3 w-[50%] rounded-xl text-white">
-                        <div className="text-xl text-white">Rich text editor</div>
+                        <div className="text-xl text-white font-bold text-center">Rich text editor</div>
                         {flag1 && !showList && userData.address && <p className={property} >Address: {userData.address}</p>}
                         {flag1 && !showList && userData.email && <p className={property}>Email: {userData.email}</p>}
                         {flag1 && !showList && userData.phone && <p className={property}>Phone: {userData.phone}</p>}
@@ -148,22 +148,22 @@ function Home(){
             {/* userData */}
             <div className="flex justify-center gap-10">
                 <div className="border rounded-xl w-[38%] h-[40%] flex flex-col items-center p-4 gap-3 text-white">
-                    <input onChange={(e)=>setName(e.target.value)} className="w-full border p-3 rounded-xl focus:outline-none text-black" type="text" placeholder="Enter any name"/>
+                    <input onChange={(e)=>setName(e.target.value)} className="w-full border p-3 rounded focus:outline-none text-black" type="text" placeholder="Enter any name"/>
                     {!name && flag && <p className="text-red-700">Please Enter Name !!</p>}
 
-                    <p className="w-full border p-3 rounded-xl">Id generator : {idGenerator}</p>
-                    <button onClick={handleIdgenerator} className="w-full p-2 bg-violet-700	 rounded-lg text-white">Save</button>
+                    <p className="w-full border p-3 rounded">Id generator : {idGenerator}</p>
+                    <button onClick={handleIdgenerator} className="w-full p-2 bg-violet-700	rounded-lg text-white font-boldf">Save</button>
                 </div>
 
                     <div className="border p-3 w-[40%] rounded-xl">
                         <div className="flex flex-col  items-start">
-                            <label className="text-lg" for="name">Enter your address: *</label>
+                            <label className="text-lg text-white font-bold" for="name">Enter your address: *</label>
                             <input onChange={(e)=>setUserData({...userData, address:e.target.value})} className="border rounded w-full pl-2 p-3 focus:outline-none" type="text"  placeholder="Enter your address"/>
                             {flag2 && !userData.address && <p className="text-red-500">Please Enter your address</p>}
                         </div>
 
                         <div className="flex flex-col  items-start">
-                            <label className="text-lg" for="email">Enter your email: *</label>
+                            <label className="text-lg text-white font-bold" for="email">Enter your email: *</label>
                             <input onChange={(e)=>setUserData({...userData, email:e.target.value})} 
                             className="border rounded w-full pl-2 p-3 focus:outline-none" type="email"  placeholder="Enter your email"/>
                             {flag2 && !userData.email && <p className="text-red-500">Please Enter your email</p>}
@@ -171,7 +171,7 @@ function Home(){
 
 
                     <div className="flex flex-col  items-start">
-                        <label className="text-lg" for="number">Enter your number: *</label>
+                        <label className="text-lg text-white font-bold" for="number">Enter your number: *</label>
                         <input 
                             onChange={(e)=>setUserData({...userData, phone:e.target.value})} 
                         
@@ -181,15 +181,15 @@ function Home(){
 
 
                     <div className="flex flex-col mt-5 items-start hover:bg-violet-900">
-                        <button onClick={handleSubmit} className="bg-violet-700	 w-full p-1 rounded-xl text-white text-lg" type="submit">Submit</button>
+                        <button onClick={handleSubmit} className="bg-violet-700	 w-full p-2 rounded-lg text-white font-bold" type="submit">Submit</button>
                     </div>
                 </div>
 
             </div>
 
-            <div>
+            <div className="w-[81%] m-auto">
                 <div className="border rounded">
-                    <div style={{ width:`${count}%` , padding:"10px", background:"blue"}}></div>
+                    <div style={{ width:`${count}%` , padding:"10px"}} className="bg-violet-700"></div>
                 </div>
             </div>
 

@@ -32,17 +32,17 @@ function SignUp(){
     }
 
     return(
-        <div className="border w-[40%] mt-20 m-auto p-4 flex flex-col gap-3 bg-yellow-300  rounded-xl shadow-xl">
-            <div className="text-center font-bold text-2xl p-4">Please Enter your details : (SIGN UP)</div>
+        <div className="border w-[40%] mt-20 m-auto p-4 flex flex-col gap-3 bg-[cadetblue]  rounded-xl shadow-xl">
+            <div className="text-center font-bold text-2xl p-4 text-white font-bold">Please Enter your details : (SIGN UP)</div>
             <div className="flex flex-col items-start gap-2">
-                <label className="text-lg " for="name">Enter username: *</label>
+                <label className="text-lg text-white font-bold" for="name">Enter username: *</label>
                 <input onChange={(e)=>setData({...data, username:e.target.value})} className="rounded w-full pl-2 p-3 focus:outline-none border" type="text"  placeholder="Enter username"/>
-                {flag && !data.username && <p className="text-red-500">Please Enter your username</p>}
+                {flag && !data.username && <p className="text-red-500 ">Please Enter your username</p>}
 
             </div>
 
             <div className="flex flex-col items-start gap-2">
-                <label className="text-lg " for="name">Enter your email: *</label>
+                <label className="text-lg text-white font-bold" for="name">Enter your email: *</label>
                 <input onChange={(e)=>setData({...data, email:e.target.value})} className="rounded w-full pl-2 p-3 focus:outline-none border" type="email"  placeholder="Enter your email"/>
                 {flag && !data.email && <p className="text-red-500">Please Enter your email</p>}
 
@@ -50,7 +50,7 @@ function SignUp(){
 
 
             <div className="flex flex-col items-start gap-2">
-                <label className="text-lg " for="name">Enter your Password: *</label>
+                <label className="text-lg text-white font-bold" for="name">Enter your Password: *</label>
                 <input onChange={(e)=>setData({...data, password:e.target.value})} className="rounded w-full pl-2 p-3 focus:outline-none border" type="password"  placeholder="Enter your password"/>
                 {flag && !data.password && <p className="text-red-500">Please Enter your password</p>}
 
@@ -63,7 +63,7 @@ function SignUp(){
 
 
             <div className="flex flex-col items-start gap-2 items-center">
-                <p className="text-lg">Already account !! <span onClick={handleNavigate} className="text-blue-800 cursor-pointer underline"> Log In</span></p>
+                <p className="text-lg text-white font-bold">Already account !! <span onClick={handleNavigate} className="text-blue-800 cursor-pointer underline"> Log In</span></p>
             </div>
         </div>
     )
