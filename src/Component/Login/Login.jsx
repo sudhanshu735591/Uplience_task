@@ -54,7 +54,7 @@ function Login(){
 
 
             <div className="flex flex-col items-start gap-2">
-                <button onClick={handleSubmit} className="bg-blue-400 text-white w-full p-3 rounded-xl" type="submit">Submit</button>
+                <button onClick={handleSubmit} className="bg-violet-700 text-white w-full p-3 rounded-xl" type="submit">Submit</button>
             </div>
 
 

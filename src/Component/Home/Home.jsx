@@ -173,9 +173,7 @@ function Home(){
                     <div className="flex flex-col  items-start">
                         <label className="text-lg" for="number">Enter your number: *</label>
                         <input 
-                            onChange={(e)=>setUserData({...userData, phone:e.target.value,
-                            
-                            })} 
+                            onChange={(e)=>setUserData({...userData, phone:e.target.value})} 
                         
                         className="border rounded w-full pl-2 p-3 focus:outline-none" type="number"  placeholder="Enter your number"/>
                         {flag2 && !userData.phone && <p className="text-red-500">Please Enter your number</p>}
