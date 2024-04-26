@@ -193,7 +193,7 @@ function Home(){
 
             <div>
                 <div className="border rounded">
-                    <div style={{border:"2px solid blue", width:`${count}%` , padding:"10px", background:"blue"}}></div>
+                    <div style={{ width:`${count}%` , padding:"10px", background:"blue"}}></div>
                 </div>
             </div>
 
