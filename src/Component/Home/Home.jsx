@@ -34,14 +34,14 @@ function Home(){
     });
 
     const increaseHandler = ()=>{
-        if(count<20){
-            setCount(count+1);
+        if(count<100){
+            setCount(count+10);
         }
     }
 
     const decreaseHanlder = ()=>{
         if(count>0){
-            setCount(count- 1);
+            setCount(count- 10);
         }
     } 
 
@@ -100,8 +100,7 @@ function Home(){
     }
 
 
-    const number = Array.from({length:count}, (_, index)=>index+1);
-    console.log("number", number);
+
 
     return(
         <div className="border w-[80%] m-auto flex flex-col mt-3 gap-3 p-10 ">
@@ -194,19 +193,10 @@ function Home(){
 
             </div>
 
-            
-
-
-         
-
             <div>
-                {number.map((val, index) => {
-                    const borderRadius = `${(index + 1) * 5}px`; 
-                    return (
-                    <div key={index} className="border w-[100%] p-3 bg-red-400" style={{ borderBottomLeftRadius:borderRadius , borderBottomRightRadius:borderRadius}}>
-                    </div>
-                    );
-                })}
+                <div className="border rounded">
+                    <div style={{border:"2px solid blue", width:`${count}%` , padding:"10px", background:"blue"}}></div>
+                </div>
             </div>
 
 
