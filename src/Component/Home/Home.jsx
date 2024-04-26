@@ -153,7 +153,7 @@ function Home(){
                     {!name && flag && <p className="text-red-700">Please Enter Name !!</p>}
 
                     <p className="w-full border p-3 rounded-xl">Id generator : {idGenerator}</p>
-                    <button onClick={handleIdgenerator} className="w-full p-2 bg-pink-300 rounded-lg text-white">Save</button>
+                    <button onClick={handleIdgenerator} className="w-full p-2 bg-red-500 rounded-lg text-white">Save</button>
                 </div>
 
                     <div className="border p-3 w-[40%] rounded-xl">
