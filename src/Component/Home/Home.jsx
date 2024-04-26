@@ -101,7 +101,7 @@ function Home(){
 
 
     return(
-        <div className="border w-[80%] m-auto flex flex-col mt-3 gap-3 p-10 ">
+        <div className="border w-[80%] m-auto flex flex-col mt-20 rounded-xl gap-3 p-10 bg-black">
             <div className="flex rounded-xl">
 
                 <div className="flex m-auto gap-10  w-[81%] ">
@@ -109,15 +109,15 @@ function Home(){
                         <div className="text-red-500 text-lg">Counter: {count}</div>
 
                         <div className="flex gap-3 justify-center flex-wrap ">
-                            <button onClick={increaseHandler} className="bg-blue-400 pl-4 pr-4 text-white pb-1">+</button>
-                            <button onClick={resetHanlder} className="bg-yellow-400 pl-4 pr-4 text-white pb-1">Reset</button>
-                            <button onClick={decreaseHanlder} className="bg-green-400 pl-4 pr-4 text-white pb-1">-</button>
+                            <button onClick={increaseHandler} className="bg-blue-400 rounded pl-4 pr-4 text-white pb-1">+</button>
+                            <button onClick={resetHanlder} className="bg-yellow-400 pl-4 rounded pr-4 text-white pb-1">Reset</button>
+                            <button onClick={decreaseHanlder} className="bg-green-400 pl-4 rounded pr-4 text-white pb-1">-</button>
                         </div>
                     </div>
 
 
 
-                    <div className="border p-3 w-[50%] rounded-xl">
+                    <div className="border p-3 w-[50%] rounded-xl text-white">
                         <div className="text-xl text-red-600">Rich text editor</div>
                         {flag1 && !showList && userData.address && <p className={property} >Address: {userData.address}</p>}
                         {flag1 && !showList && userData.email && <p className={property}>Email: {userData.email}</p>}
@@ -148,8 +148,8 @@ function Home(){
 
             {/* userData */}
             <div className="flex justify-center gap-10">
-                <div className="border rounded-xl w-[38%] h-[40%] flex flex-col items-center p-4 gap-3">
-                    <input onChange={(e)=>setName(e.target.value)} className="w-full border p-3 rounded-xl focus:outline-none" type="text" placeholder="Enter any name"/>
+                <div className="border rounded-xl w-[38%] h-[40%] flex flex-col items-center p-4 gap-3 text-white">
+                    <input onChange={(e)=>setName(e.target.value)} className="w-full border p-3 rounded-xl focus:outline-none text-black" type="text" placeholder="Enter any name"/>
                     {!name && flag && <p className="text-red-700">Please Enter Name !!</p>}
 
                     <p className="w-full border p-3 rounded-xl">Id generator : {idGenerator}</p>
