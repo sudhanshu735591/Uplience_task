@@ -86,6 +86,7 @@ function Home(){
     }
 
     function handleSubmit(){
+
         if(userData.address && userData.email && userData.phone){
             setFlag1(true);
         }
@@ -98,12 +99,6 @@ function Home(){
     console.log("number", number);
 
     return(
-        // <div className="flex justify-center">
-        //     {/* <ColorButtons /> */}
-            
-        // </div>
-
-
         <div className="border w-[80%] m-auto flex flex-col mt-3 gap-3 p-10 ">
             <div className="flex rounded-xl">
 
@@ -203,7 +198,7 @@ function Home(){
                 {number.map((val, index) => {
                     const borderRadius = `${(index + 1) * 5}px`; 
                     return (
-                    <div key={index} className="border w-[100%] p-3" style={{ borderBottomLeftRadius:borderRadius , borderBottomRightRadius:borderRadius}}>
+                    <div key={index} className="border w-[100%] p-3 bg-red-400" style={{ borderBottomLeftRadius:borderRadius , borderBottomRightRadius:borderRadius}}>
                     </div>
                     );
                 })}
