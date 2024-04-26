@@ -105,7 +105,7 @@ function Home(){
 
                 <div className="flex m-auto gap-10  w-[81%] ">
                     <div className="border p-3 w-[46%] rounded-xl flex flex-col gap-3 text-center">
-                        <div className="text-red-500 text-lg">Counter: {count}</div>
+                        <div className="text-white text-lg">Counter: {count}</div>
 
                         <div className="flex gap-3 justify-center flex-wrap ">
                             <button onClick={increaseHandler} className="bg-green-400 rounded pl-4 pr-4 text-white pb-1">+</button>
@@ -117,7 +117,7 @@ function Home(){
 
 
                     <div className="border p-3 w-[50%] rounded-xl text-white">
-                        <div className="text-xl text-red-600">Rich text editor</div>
+                        <div className="text-xl text-white">Rich text editor</div>
                         {flag1 && !showList && userData.address && <p className={property} >Address: {userData.address}</p>}
                         {flag1 && !showList && userData.email && <p className={property}>Email: {userData.email}</p>}
                         {flag1 && !showList && userData.phone && <p className={property}>Phone: {userData.phone}</p>}
