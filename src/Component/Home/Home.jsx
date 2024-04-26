@@ -71,7 +71,6 @@ function Home(){
             setShowList(true);
         }
 
-        // textDecoration
     }
 
     function handleIdgenerator(){
@@ -109,9 +108,9 @@ function Home(){
                         <div className="text-red-500 text-lg">Counter: {count}</div>
 
                         <div className="flex gap-3 justify-center flex-wrap ">
-                            <button onClick={increaseHandler} className="bg-blue-400 rounded pl-4 pr-4 text-white pb-1">+</button>
+                            <button onClick={increaseHandler} className="bg-green-400 rounded pl-4 pr-4 text-white pb-1">+</button>
                             <button onClick={resetHanlder} className="bg-yellow-400 pl-4 rounded pr-4 text-white pb-1">Reset</button>
-                            <button onClick={decreaseHanlder} className="bg-green-400 pl-4 rounded pr-4 text-white pb-1">-</button>
+                            <button onClick={decreaseHanlder} className="bg-red-800 pl-4 rounded pr-4 text-white pb-1">-</button>
                         </div>
                     </div>
 
@@ -153,7 +152,7 @@ function Home(){
                     {!name && flag && <p className="text-red-700">Please Enter Name !!</p>}
 
                     <p className="w-full border p-3 rounded-xl">Id generator : {idGenerator}</p>
-                    <button onClick={handleIdgenerator} className="w-full p-2 bg-red-500 rounded-lg text-white">Save</button>
+                    <button onClick={handleIdgenerator} className="w-full p-2 bg-violet-700	 rounded-lg text-white">Save</button>
                 </div>
 
                     <div className="border p-3 w-[40%] rounded-xl">
@@ -168,7 +167,6 @@ function Home(){
                             <input onChange={(e)=>setUserData({...userData, email:e.target.value})} 
                             className="border rounded w-full pl-2 p-3 focus:outline-none" type="email"  placeholder="Enter your email"/>
                             {flag2 && !userData.email && <p className="text-red-500">Please Enter your email</p>}
-
                         </div>
 
 
@@ -185,7 +183,7 @@ function Home(){
 
 
                     <div className="flex flex-col mt-5 items-start hover:bg-violet-900">
-                        <button onClick={handleSubmit} className="bg-red-500 w-full p-1 rounded-xl text-white text-lg" type="submit">Submit</button>
+                        <button onClick={handleSubmit} className="bg-violet-700	 w-full p-1 rounded-xl text-white text-lg" type="submit">Submit</button>
                     </div>
                 </div>
 
