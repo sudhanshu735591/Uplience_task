@@ -81,9 +81,9 @@ function Home() {
   }
 
   return (
-    <div className="border w-[80%] m-auto flex flex-col mt-20 rounded-xl gap-3 p-10 bg-[cadetblue]">
+    <div className="border w-[80%] m-auto flex flex-col rounded-xl gap-3 p-10 bg-[cadetblue]">
       <div className="flex rounded-xl">
-        <div className="flex m-auto gap-10  w-[81%] ">
+        <div className="flex m-auto gap-10 w-[81%] justify-center sm:flex-wrap">
           <div className="border p-3 w-[46%] rounded-xl flex flex-col gap-3 text-center">
             <div className="text-white text-xl font-bold">Counter: {count}</div>
 
@@ -166,8 +166,8 @@ function Home() {
       </div>
 
       {/* userData */}
-      <div className="flex justify-center gap-10">
-        <div className="border rounded-xl w-[38%] h-[40%] flex flex-col items-center p-4 gap-3 text-white">
+      <div className="flex justify-center gap-10 md:flex-col sxm:border-0">
+        <div className="border rounded-xl w-[38%] h-[40%] flex flex-col items-center p-4 gap-3 text-white md:w-auto">
           <input
             onChange={(e) => setName(e.target.value)}
             className="w-full border p-3 rounded focus:outline-none text-black"
@@ -188,14 +188,12 @@ function Home() {
             Save
           </button>
 
-            <div>
                 <BarCharts/>
-            </div>
         </div>
 
         
 
-        <div className="border p-3 w-[40%] rounded-xl">
+        <div className="border p-3 w-[40%] rounded-xl md:w-auto">
           <div className="flex flex-col  items-start">
             <label className="text-lg text-white font-bold" for="name">
               Enter your address: *
